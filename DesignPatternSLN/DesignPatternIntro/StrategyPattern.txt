@@ -1,0 +1,7 @@
+﻿OOP Lesson Learnt 
+1.Favor composition over inheritance
+2.Code against Interfaces, not implementaions.
+
+Strategy Pattern:
+The strategy pattern defines a family of algorithms, encapsulates each one,
+and makes them interchangeable. Strategy lets the algorithm vary independently from clients that uses it.

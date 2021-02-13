@@ -1,0 +1,8 @@
+﻿Pulishers + Subsucribers = Observer Pattern
+The Observer pattern defines a one-to-many dependency between objects so 
+that one object chanegs state, all of its dependents are notified and
+updated automatically.
+
+ISUBJECT-->Object uses this interface to register as observer and also to remove from themselve from being the obsevers
+IOBSERVER-->All potentual observers need to implements the Observer interface. This interface has just one method
+			 Update() that is called when the subject's state changes.
