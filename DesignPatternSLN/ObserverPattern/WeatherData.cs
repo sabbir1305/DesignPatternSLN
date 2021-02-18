@@ -20,7 +20,7 @@ namespace DesignPatternSLN.ObserverPattern
         {
             foreach (var o in observers)
             {
-                o.Update(temparature, humidity, pressure);
+                o.Update();
             }
         }
 
@@ -44,6 +44,18 @@ namespace DesignPatternSLN.ObserverPattern
             humidity = humid;
             pressure = press;
             MeasurementsChanged();
+        }
+        public double GetTemperature()
+        {
+            return temparature;
+        }
+        public double GetHumidity()
+        {
+            return humidity;
+        }
+        public double GetPressure()
+        {
+            return pressure;
         }
     }
 }

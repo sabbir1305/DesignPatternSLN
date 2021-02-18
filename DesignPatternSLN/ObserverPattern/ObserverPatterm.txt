@@ -6,3 +6,15 @@ updated automatically.
 ISUBJECT-->Object uses this interface to register as observer and also to remove from themselve from being the obsevers
 IOBSERVER-->All potentual observers need to implements the Observer interface. This interface has just one method
 			 Update() that is called when the subject's state changes.
+
+OBSERVER: defines a one to many dependency between objects so that when one object changes state,
+			all its dependents are notified and updated 
+			automatically
+
+NOTES:
+1.The Observer Pattern defines a one to many relationship between objects
+2. Subjects update Observers using a common interface
+3. Observers are loosely coupled in that the Subject knows nothing about them
+,other than that they implement the Observer interface
+4.You can push or pull data from the Subject when using the pattern 
+

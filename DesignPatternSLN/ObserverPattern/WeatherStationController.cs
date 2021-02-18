@@ -11,9 +11,9 @@ namespace DesignPatternSLN.ObserverPattern
         public IActionResult Index()
         {
             var data = new WeatherData();
-           
+            data.SetMEasurements(10, 20, 30);
             CurrentConditionDisplay currentCondition = new CurrentConditionDisplay(data);
-            currentCondition.Update(30, 10, 0);
+            currentCondition.Update();
             currentCondition.Display();
             return View(currentCondition);
         }

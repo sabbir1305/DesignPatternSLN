@@ -27,10 +27,10 @@ namespace DesignPatternSLN.ObserverPattern
             displayString = $"Current conditions: {temparature} F degress and {humidity}% humidity";
         }
 
-        public void Update(double temp, double humidity, double pressure)
+        public void Update()
         {
-            this.temparature = temp;
-            this.humidity = humidity;
+            this.temparature = weatherData.GetTemperature();
+            this.humidity = weatherData.GetHumidity();
            
         }
     }
