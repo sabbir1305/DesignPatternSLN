@@ -1,0 +1,13 @@
+﻿@model DesignPatternSLN.DecoratorPattern.ViewCoffeListDto
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CoffeList</h1>
+
+@foreach (var item in Model.CoffeList)
+{
+    <p>Coffe: @item</p>
+}
+
+
