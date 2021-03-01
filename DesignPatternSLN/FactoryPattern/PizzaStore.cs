@@ -5,22 +5,20 @@ using System.Threading.Tasks;
 
 namespace DesignPatternSLN.FactoryPattern
 {
-    public class PizzaStore
+    public abstract class PizzaStore
     {
-        SimplePizzaFactory factory;
-        public PizzaStore(SimplePizzaFactory factory)
-        {
-            this.factory = factory;
-        }
+     
 
         public IPizza OrderPizza(string type)
         {
             IPizza pizza;
-            pizza = factory.CreatePizza(type);
+            pizza = CreatePizza(type);
             pizza.Bake();
             pizza.Prepare();
             pizza.Cut();
+            pizza.Box();
             return pizza;
         }
+     public  abstract IPizza CreatePizza(string type);
     }
 }
