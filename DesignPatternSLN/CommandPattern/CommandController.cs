@@ -13,7 +13,12 @@ namespace DesignPatternSLN.CommandPattern
             SimpleRemoteControl remote = new SimpleRemoteControl();
             ILight light = new Light();
             LightOnCommand lightOn = new LightOnCommand(light);
+
+            IGarageDoor door = new GarageDoor();
+            GarageDoorOpenCommand garage = new GarageDoorOpenCommand(door);
             remote.SetCommand(lightOn);
+            remote.ButtonWasPressed();
+            remote.SetCommand(garage);
             remote.ButtonWasPressed();
             return View();
         }
